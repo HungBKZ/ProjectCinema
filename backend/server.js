@@ -17,7 +17,8 @@ connectDB();
 // Middleware
 const allowedOrigins = [
   'http://localhost:3000',
-  process.env.FRONTEND_URL // Add your Vercel URL here
+  'https://project-cinema-pied.vercel.app',
+  process.env.FRONTEND_URL
 ].filter(Boolean);
 
 app.use(cors({
