@@ -3,9 +3,9 @@ const nodemailer = require('nodemailer');
 // Tạo transporter để gửi email - Config chuẩn cho Render
 const createTransporter = () => {
   return nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false, // true for 465, false for other ports (587 dùng STARTTLS)
+    host: process.env.EMAIL_HOST,
+    port: parseInt(process.env.EMAIL_PORT), // Chuyển string sang số
+    secure: false, // false cho port 587 (STARTTLS)
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASSWORD
