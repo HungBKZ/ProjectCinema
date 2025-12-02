@@ -23,10 +23,6 @@ npm install
 npm start
 ```
 
-## Tài khoản Admin mặc định
-- Username: admin123
-- Password: Admin123@
-
 ## Thông tin phim
 - **Tên phim**: ĐỐI
 - **Ngày chiếu**: 28/12/2024
