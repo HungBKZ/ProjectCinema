@@ -13,11 +13,10 @@ const SeatSelection = () => {
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-  const [userBookedSeats, setUserBookedSeats] = useState(0);
 
   // Seat layout based on the image
   const seatLayout = {
-    'A': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 20, 21], // Không có ghế 14, 15
+    'A': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
     'B': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
     'C': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
     'D': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
@@ -59,13 +58,10 @@ const SeatSelection = () => {
   const fetchUserBookings = async () => {
     try {
       const response = await api.get('/bookings/my-bookings');
+      // eslint-disable-next-line no-unused-vars
       const activeBookings = response.data.filter(b => 
         b.status === 'pending' || b.status === 'confirmed'
       );
-      const totalSeats = activeBookings.reduce((sum, booking) => 
-        sum + booking.seats.length, 0
-      );
-      setUserBookedSeats(totalSeats);
     } catch (error) {
       console.error('Error fetching user bookings:', error);
     }
@@ -97,16 +93,6 @@ const SeatSelection = () => {
       setSelectedSeats(selectedSeats.filter(s => s !== seatId));
       setError('');
     } else {
-      // Check tổng số ghế (số đã đẳt + số đang chọn + 1)
-      const totalWillBe = userBookedSeats + selectedSeats.length + 1;
-      if (totalWillBe > 2) {
-        setError(`Bạn đã đặt ${userBookedSeats} ghế. Mỗi tài khoản chỉ được đặt tối đa 2 ghế!`);
-        return;
-      }
-      if (selectedSeats.length >= 2) {
-        setError('Chỉ được chọn tối đa 2 ghế');
-        return;
-      }
       setSelectedSeats([...selectedSeats, seatId]);
       setError('');
     }
@@ -164,12 +150,6 @@ const SeatSelection = () => {
       </header>
 
       <main className="seat-main">
-        {userBookedSeats > 0 && (
-          <div className="booking-notice">
-            ⚠️ Bạn đã đặt {userBookedSeats} ghế. Bạn chỉ có thể đặt thêm tối đa {2 - userBookedSeats} ghế nữa.
-          </div>
-        )}
-
         <div className="screen-section">
           <div className="screen">MÀN HÌNH</div>
         </div>

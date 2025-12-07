@@ -45,7 +45,7 @@ const Login = () => {
     <div className="auth-container">
       <div className="auth-card">
         <h1 className="auth-title">Đăng Nhập</h1>
-        <p className="auth-subtitle">Đặt vé xem phim ĐỐI</p>
+        <p className="auth-subtitle">Đặt vé xem EYESEE Showcase</p>
         
         {error && <div className="error-message">{error}</div>}
         

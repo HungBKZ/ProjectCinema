@@ -4,19 +4,18 @@ import { useAuth } from '../context/AuthContext';
 import './Home.css';
 
 const MOVIE_INFO = {
-  title: 'ĐỐI',
-  poster: 'https://res.cloudinary.com/dvucotc8z/image/upload/v1764607026/IMG_7307_fsmlxh.jpg',
-  description: `Bộ phim lấy cảm hứng từ những chia sẻ có thật của người trẻ sống chung với "rối loạn cảm xúc lưỡng cực", đặc biệt là những người mang trong mình sang chấn tuổi thơ không được nhìn thấy.
-
-"ĐỐI" là hành trình bên trong một tâm trí bị chia cắt bởi hưng cảm – trầm cảm – và ký ức. Một nỗ lực để được nhìn thấy, không phải bởi người khác, mà bởi chính mình.`,
+  title: 'EYESEE Showcase',
+  poster: 'https://res.cloudinary.com/dvucotc8z/image/upload/v1765070209/EyeSee_Show_bzgmu0.png',
+  description: `Một show đánh dấu bước chuyển mình mạnh mẽ của EYESEE, nơi những mảnh ghép con người tự tụ hợp lại với nhau, nơi ánh nhìn mới được khai mở, nơi trải nghiệm vượt khỏi khuôn khổ thường thấy. Sự kiện mang đến không khí hoàn toàn mới lạ, mở màn cho hành trình tái định nghĩa bản sắc sáng tạo của EYESEE. Tại đây, hai bộ phim được công chiếu như hai mảnh ghép quan trọng, hé lộ những câu chuyện sâu sắc, đầy cảm xúc và chất nghệ thuật đặc trưng. Tất cả hòa quyện thành một đêm trình chiếu cuốn hút và khó đoán, khiến mỗi khoảnh khắc đều trở thành một trải nghiệm đáng nhớ.`,
+  organizer: 'EYESEE',
   genre: 'Gia Đình, Chính Kịch',
   director: 'Nguyễn Tấn Phát, Huỳnh Phú Thịnh',
   cast: 'Khánh Duy, Thành Nhân, Khazsar',
   language: 'Phụ đề Tiếng Việt - Anh',
-  duration: '50 phút',
-  releaseDate: '28/12/2024',
-  showtime: '18h30',
-  location: 'Lotte Cinema Ninh Kiều - Thành Phố Cần Thơ',
+  duration: '2 tiếng 30p',
+  releaseDate: '28/12/2025',
+  showtime: '19h30',
+  location: 'TTTM Lotte Mart, 84 Đ. Mậu Thân, Cái Khế, Ninh Kiều, Cần Thơ, Việt Nam',
   price: '99.000 VNĐ'
 };
 
@@ -28,7 +27,7 @@ const Home = () => {
     <div className="home-container">
       <header className="home-header">
         <div className="header-content">
-          <h1>🎬 Cinema Booking</h1>
+          <h1>🎬 Showcase Booking</h1>
           <div className="header-actions">
             <span className="user-name">Xin chào, {user?.firstName}!</span>
             <button onClick={() => navigate('/profile')} className="btn btn-secondary">
@@ -54,6 +53,11 @@ const Home = () => {
             <h1 className="movie-title">{MOVIE_INFO.title}</h1>
             
             <div className="movie-info-grid">
+              <div className="info-item">
+                <span className="info-label">🎪 Đơn vị tổ chức:</span>
+                <span className="info-value">{MOVIE_INFO.organizer}</span>
+              </div>
+
               <div className="info-item">
                 <span className="info-label">🎭 Thể loại:</span>
                 <span className="info-value">{MOVIE_INFO.genre}</span>
@@ -101,7 +105,7 @@ const Home = () => {
             </div>
 
             <div className="movie-description">
-              <h3>Nội dung phim:</h3>
+              <h3>Nội dung:</h3>
               <p>{MOVIE_INFO.description}</p>
             </div>
 

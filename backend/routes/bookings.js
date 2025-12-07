@@ -16,25 +16,7 @@ router.post('/', auth, async (req, res) => {
     const { seatIds } = req.body;
 
     if (!seatIds || seatIds.length === 0) {
-      return res.status(400).json({ message: 'Please select at least one seat' });
-    }
-
-    if (seatIds.length > 2) {
-      return res.status(400).json({ message: 'Maximum 2 seats can be booked at once' });
-    }
-
-    // Check total seats already booked by user (pending or confirmed)
-    const userBookings = await Booking.find({
-      user: req.user._id,
-      status: { $in: ['pending', 'confirmed'] }
-    });
-
-    const totalSeatsBooked = userBookings.reduce((sum, booking) => sum + booking.seats.length, 0);
-    
-    if (totalSeatsBooked + seatIds.length > 2) {
-      return res.status(400).json({ 
-        message: `Bạn đã đặt ${totalSeatsBooked} ghế. Mỗi tài khoản chỉ được đặt tối đa 2 ghế!` 
-      });
+      return res.status(400).json({ message: 'Vui lòng chọn ít nhất 1 ghế' });
     }
 
     // Check if seats are available (not booked)

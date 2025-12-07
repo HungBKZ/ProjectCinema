@@ -5,7 +5,7 @@ import api from '../utils/api';
 import './Payment.css';
 
 const TICKET_PRICE = 99000;
-const QR_IMAGE = 'https://res.cloudinary.com/dvucotc8z/image/upload/v1764607722/z7282799235046_5979fd1d33ff4406d2e1701f21d139a3_pgtiih.jpg';
+const QR_IMAGE = 'https://res.cloudinary.com/dvucotc8z/image/upload/v1765073087/Screenshot_2025-12-07_090347_a63jol.png';
 
 const Payment = () => {
   const navigate = useNavigate();
@@ -141,20 +141,20 @@ const Payment = () => {
               <h3>Thông Tin Phim</h3>
               <div className="info-grid">
                 <div className="info-item">
-                  <span className="label">Tên phim:</span>
-                  <span className="value">ĐỐI</span>
+                  <span className="label">Sự kiện:</span>
+                  <span className="value">EYESEE Showcase</span>
                 </div>
                 <div className="info-item">
                   <span className="label">Ngày chiếu:</span>
-                  <span className="value">28/12/2024</span>
+                  <span className="value">28/12/2025</span>
                 </div>
                 <div className="info-item">
                   <span className="label">Giờ chiếu:</span>
-                  <span className="value">18h30</span>
+                  <span className="value">19h30</span>
                 </div>
                 <div className="info-item">
                   <span className="label">Địa điểm:</span>
-                  <span className="value">Lotte Cinema Ninh Kiều - Cần Thơ</span>
+                  <span className="value">TTTM Lotte Mart, Cần Thơ</span>
                 </div>
               </div>
             </div>
@@ -199,15 +199,15 @@ const Payment = () => {
                 <div className="bank-details">
                   <div className="bank-item">
                     <span className="label">Ngân hàng:</span>
-                    <span className="value">MB BANK</span>
+                    <span className="value">Vietcombank</span>
                   </div>
                   <div className="bank-item">
                     <span className="label">Số tài khoản:</span>
-                    <span className="value highlight">0772967049</span>
+                    <span className="value highlight">9384396474</span>
                   </div>
                   <div className="bank-item">
                     <span className="label">Chủ tài khoản:</span>
-                    <span className="value">PHAN THANH HUNG</span>
+                    <span className="value">HUYNH THI THAO NGUYEN</span>
                   </div>
                   <div className="bank-item">
                     <span className="label">Số tiền:</span>
@@ -216,7 +216,7 @@ const Payment = () => {
                   <div className="bank-item">
                     <span className="label">Nội dung:</span>
                     <span className="value highlight">
-                      {user?.phone} {selectedSeats.join(' ')}
+                      {user?.firstName} {user?.lastName} {selectedSeats.join(' ')}
                     </span>
                   </div>
                 </div>

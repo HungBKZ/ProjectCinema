@@ -40,25 +40,7 @@ router.post('/reserve', auth, async (req, res) => {
     const { seatIds } = req.body;
 
     if (!seatIds || seatIds.length === 0) {
-      return res.status(400).json({ message: 'Please select at least one seat' });
-    }
-
-    if (seatIds.length > 2) {
-      return res.status(400).json({ message: 'Maximum 2 seats can be reserved at once' });
-    }
-
-    // Check total seats already booked by user (pending or confirmed)
-    const userBookings = await Booking.find({
-      user: req.user._id,
-      status: { $in: ['pending', 'confirmed'] }
-    });
-
-    const totalSeatsBooked = userBookings.reduce((sum, booking) => sum + booking.seats.length, 0);
-    
-    if (totalSeatsBooked + seatIds.length > 2) {
-      return res.status(400).json({ 
-        message: `Bạn đã đặt ${totalSeatsBooked} ghế. Mỗi tài khoản chỉ được đặt tối đa 2 ghế!` 
-      });
+      return res.status(400).json({ message: 'Vui lòng chọn ít nhất 1 ghế' });
     }
 
     // Check for gaps (empty seats between selected seats in same row)
@@ -86,7 +68,7 @@ router.post('/reserve', auth, async (req, res) => {
           
           if (gapSeats.length > 0) {
             return res.status(400).json({ 
-              message: 'Cannot leave empty seats between selected seats in the same row' 
+              message: 'Không thể để trống ghế giữa các ghế đã chọn trong cùng một hàng' 
             });
           }
         }
