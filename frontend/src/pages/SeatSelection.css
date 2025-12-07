@@ -1,13 +1,14 @@
 .seat-selection-container {
   min-height: 100vh;
   padding-bottom: 40px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
 }
 
 .seat-header {
-  background: #ffffff;
-  box-shadow: 0 2px 10px rgba(59, 130, 246, 0.1);
+  background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   padding: 20px 0;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #404040;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -39,23 +40,24 @@
 }
 
 .screen {
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  background: linear-gradient(135deg, #404040 0%, #2a2a2a 100%);
   padding: 15px 100px;
   border-radius: 0 0 50% 50%;
-  color: white;
+  color: #C8C8C8;
   font-weight: 700;
   font-size: 18px;
-  box-shadow: 0 5px 20px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
   letter-spacing: 3px;
+  border: 1px solid #606060;
 }
 
 .seat-map {
-  background: #ffffff;
+  background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
   border-radius: 20px;
   padding: 30px 20px;
   margin-bottom: 30px;
-  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.1);
-  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  border: 1px solid #404040;
 }
 
 .seat-row {
@@ -68,7 +70,7 @@
 
 .row-label {
   font-weight: 700;
-  color: #6b7280;
+  color: #C8C8C8;
   width: 30px;
   text-align: center;
   font-size: 14px;
@@ -150,9 +152,9 @@
   flex-wrap: wrap;
   margin-bottom: 30px;
   padding: 20px;
-  background: #ffffff;
+  background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
   border-radius: 15px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #404040;
 }
 
 .legend-item {
@@ -160,12 +162,12 @@
   align-items: center;
   gap: 10px;
   font-size: 14px;
-  color: #4b5563;
+  color: #C8C8C8;
 }
 
 .available-demo {
-  background: #f8faff;
-  border: 2px solid #d1d5db;
+  background: #1a1a1a;
+  border: 2px solid #404040;
   width: 30px;
   height: 30px;
   border-radius: 6px;
@@ -196,11 +198,11 @@
 }
 
 .booking-summary {
-  background: #ffffff;
+  background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
   border-radius: 20px;
   padding: 30px;
-  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.1);
-  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  border: 1px solid #404040;
 }
 
 .timer-warning {
@@ -226,22 +228,24 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  background: #f8faff;
+  background: #000000 !important;
   border-radius: 10px;
   font-size: 16px;
+  color: #ffffff;
+  border: 1px solid #404040;
 }
 
 .summary-item.total {
-  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-  border: 1px solid #3b82f6;
+  background: #000000 !important;
+  border: 1px solid #606060;
   font-size: 20px;
   font-weight: 700;
-  color: #3b82f6;
+  color: #ffffff;
 }
 
 .selected-seats-list {
   font-weight: 600;
-  color: #3b82f6;
+  color: #ffffff;
 }
 
 .action-buttons {

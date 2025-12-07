@@ -150,7 +150,7 @@ const Payment = () => {
                 </div>
                 <div className="info-item">
                   <span className="label">Giờ chiếu:</span>
-                  <span className="value">19h30</span>
+                  <span className="value">19h15</span>
                 </div>
                 <div className="info-item">
                   <span className="label">Địa điểm:</span>

@@ -14,7 +14,7 @@ const MOVIE_INFO = {
   language: 'Phụ đề Tiếng Việt - Anh',
   duration: '2 tiếng 30p',
   releaseDate: '28/12/2025',
-  showtime: '19h30',
+  showtime: '19h15',
   location: 'TTTM Lotte Mart, 84 Đ. Mậu Thân, Cái Khế, Ninh Kiều, Cần Thơ, Việt Nam',
   price: '99.000 VNĐ'
 };
@@ -56,21 +56,6 @@ const Home = () => {
               <div className="info-item">
                 <span className="info-label">🎪 Đơn vị tổ chức:</span>
                 <span className="info-value">{MOVIE_INFO.organizer}</span>
-              </div>
-
-              <div className="info-item">
-                <span className="info-label">🎭 Thể loại:</span>
-                <span className="info-value">{MOVIE_INFO.genre}</span>
-              </div>
-
-              <div className="info-item">
-                <span className="info-label">🎬 Đạo diễn:</span>
-                <span className="info-value">{MOVIE_INFO.director}</span>
-              </div>
-
-              <div className="info-item">
-                <span className="info-label">⭐ Diễn viên:</span>
-                <span className="info-value">{MOVIE_INFO.cast}</span>
               </div>
 
               <div className="info-item">
