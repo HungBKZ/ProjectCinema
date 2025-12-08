@@ -38,7 +38,7 @@ BREVO_SMTP_KEY=your_smtp_key_here
 
 **Ví dụ thực tế:**
 ```env
-BREVO_SMTP_KEY=xsmtpsib-3c79fa86ff1d1126d25597b13069fbc66146ef6166257b78a72db1ebd921499d-jZKJgg4i0fPC8Qcv
+BREVO_SMTP_KEY=xsmtpsib-your-actual-key-here
 ```
 
 ### 3.2 Verify Email Configuration

@@ -75,7 +75,7 @@ RESEND_API_KEY=re_BRSptfGW_8JYcqRvC5duACyJcw2Vm9hsj
 
 **After:**
 ```env
-BREVO_SMTP_KEY=xsmtpsib-3c79fa86ff1d1126d25597b13069fbc66146ef6166257b78a72db1ebd921499d-jZKJgg4i0fPC8Qcv
+BREVO_SMTP_KEY=xsmtpsib-your-actual-key-here
 ```
 
 ### Email Functions Updated
@@ -98,7 +98,7 @@ BREVO_SMTP_KEY=xsmtpsib-3c79fa86ff1d1126d25597b13069fbc66146ef6166257b78a72db1eb
 Server: smtp-relay.brevo.com
 Port: 587 (TLS)
 Login: 9d1b3f001@smtp-brevo.com
-SMTP Key: xsmtpsib-3c79fa86ff1d1126d25597b13069fbc66146ef6166257b78a72db1ebd921499d-jZKJgg4i0fPC8Qcv
+SMTP Key: [Your SMTP Key from Brevo Dashboard]
 Sender: EYESEE Showcase <9d1b3f001@smtp-brevo.com>
 ```
 
@@ -167,7 +167,7 @@ Expected: Email arrives to user's registered email with booking details
 1. **Update Render Environment**
    ```
    Key: BREVO_SMTP_KEY
-   Value: xsmtpsib-3c79fa86ff1d1126d25597b13069fbc66146ef6166257b78a72db1ebd921499d-jZKJgg4i0fPC8Qcv
+   Value: your_brevo_smtp_key_here
    ```
 
 2. **Deploy Code**

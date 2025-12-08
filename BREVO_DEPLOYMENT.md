@@ -28,7 +28,7 @@
 4. Add new environment variable:
    ```
    Key: BREVO_SMTP_KEY
-   Value: xsmtpsib-3c79fa86ff1d1126d25597b13069fbc66146ef6166257b78a72db1ebd921499d-jZKJgg4i0fPC8Qcv
+   Value: your_brevo_smtp_key_here
    ```
 5. Click **Save Changes**
 
