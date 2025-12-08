@@ -80,11 +80,6 @@ const Home = () => {
               </div>
 
               <div className="info-item">
-                <span className="info-label">Giờ chiếu:</span>
-                <span className="info-value">{MOVIE_INFO.showtime}</span>
-              </div>
-
-              <div className="info-item">
                 <span className="info-label">Địa điểm:</span>
                 <span className="info-value">{MOVIE_INFO.location}</span>
               </div>

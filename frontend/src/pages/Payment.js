@@ -149,8 +149,8 @@ const Payment = () => {
                   <span className="value">28/12/2025</span>
                 </div>
                 <div className="info-item">
-                  <span className="label">Giờ chiếu:</span>
-                  <span className="value">19h15</span>
+                  <span className="label">Có mặt lúc:</span>
+                  <span className="value">18 giờ</span>
                 </div>
                 <div className="info-item">
                   <span className="label">Địa điểm:</span>
