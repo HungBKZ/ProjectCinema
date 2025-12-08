@@ -137,10 +137,10 @@ const SeatSelection = () => {
     <div className="seat-selection-container">
       <header className="seat-header">
         <div className="header-content">
-          <h1>🎬 Chọn Ghế</h1>
+          <h1>Chọn Ghế</h1>
           <div className="header-actions">
             <button onClick={handleGoBack} className="btn btn-secondary">
-              ← Quay lại
+              Quay lại
             </button>
             <button onClick={logout} className="btn btn-outline">
               Đăng xuất

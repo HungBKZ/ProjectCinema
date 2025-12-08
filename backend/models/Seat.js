@@ -11,8 +11,7 @@ const seatSchema = new mongoose.Schema({
   },
   seatId: {
     type: String,
-    required: true,
-    unique: true
+    required: true
   },
   isBooked: {
     type: Boolean,

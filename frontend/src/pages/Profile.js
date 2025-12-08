@@ -124,10 +124,10 @@ const Profile = () => {
     <div className="profile-container">
       <header className="profile-header">
         <div className="header-content">
-          <h1>👤 Thông Tin Cá Nhân</h1>
+          <h1>Thông Tin Cá Nhân</h1>
           <div className="header-actions">
             <button onClick={() => navigate('/')} className="btn btn-secondary">
-              ← Quay lại
+              Quay lại
             </button>
             <button onClick={logout} className="btn btn-outline">
               Đăng xuất

@@ -49,34 +49,34 @@ const Success = () => {
             <h2>Thông Tin Đặt Vé</h2>
             
             <div className="detail-row">
-              <span className="label">🎬 Phim:</span>
-              <span className="value">ĐỐI</span>
+              <span className="label">Sự kiện:</span>
+              <span className="value">EYESEE Showcase: "Refocus - The Next Frame"</span>
             </div>
 
             <div className="detail-row">
-              <span className="label">📅 Ngày chiếu:</span>
-              <span className="value">28/12/2024</span>
+              <span className="label">Ngày chiếu:</span>
+              <span className="value">28/12/2025</span>
             </div>
 
             <div className="detail-row">
-              <span className="label">🕐 Giờ chiếu:</span>
-              <span className="value">18h30</span>
+              <span className="label">Giờ chiếu:</span>
+              <span className="value">19h15</span>
             </div>
 
             <div className="detail-row">
-              <span className="label">📍 Địa điểm:</span>
-              <span className="value">Lotte Cinema Ninh Kiều - Cần Thơ</span>
+              <span className="label">Địa điểm:</span>
+              <span className="value">TTTM Lotte Mart, Cần Thơ</span>
             </div>
 
             <div className="detail-row highlight">
-              <span className="label">🪑 Ghế đã chọn:</span>
+              <span className="label">Ghế đã chọn:</span>
               <span className="value seats">
                 {bookingDetails.seats?.map(seat => seat.seatId).join(', ')}
               </span>
             </div>
 
             <div className="detail-row highlight">
-              <span className="label">💰 Tổng tiền:</span>
+              <span className="label">Tổng tiền:</span>
               <span className="value amount">
                 {bookingDetails.totalAmount?.toLocaleString('vi-VN')} VNĐ
               </span>
@@ -84,7 +84,7 @@ const Success = () => {
           </div>
 
           <div className="next-steps">
-            <h3>⚠️ Bước Tiếp Theo</h3>
+            <h3>Bước Tiếp Theo</h3>
             <ul>
               <li>Vui lòng chụp màn hình bill chuyển khoản</li>
               <li>Gửi ảnh cho admin qua Zalo/Messenger để xác nhận</li>
@@ -98,13 +98,13 @@ const Success = () => {
               onClick={() => navigate('/my-bookings')} 
               className="btn btn-primary"
             >
-              📋 Xem Vé Của Tôi
+              Xem Vé Của Tôi
             </button>
             <button 
               onClick={() => navigate('/')} 
               className="btn btn-secondary"
             >
-              🏠 Về Trang Chủ
+              Về Trang Chủ
             </button>
           </div>
         </div>

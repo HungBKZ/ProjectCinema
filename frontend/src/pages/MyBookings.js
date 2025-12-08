@@ -48,10 +48,10 @@ const MyBookings = () => {
     <div className="my-bookings-container">
       <header className="bookings-header">
         <div className="header-content">
-          <h1>🎟️ Vé Của Tôi</h1>
+          <h1>Vé Của Tôi</h1>
           <div className="header-actions">
             <button onClick={() => navigate('/')} className="btn btn-secondary">
-              ← Quay lại
+              Quay lại
             </button>
             <button onClick={logout} className="btn btn-outline">
               Đăng xuất
@@ -77,7 +77,7 @@ const MyBookings = () => {
               return (
                 <div key={booking._id} className="ticket-card">
                   <div className="ticket-header">
-                    <h2>ĐỐI</h2>
+                    <h2>EYESEE Showcase: "Refocus - The Next Frame"</h2>
                     <span className={`status-badge ${badge.class}`}>
                       {badge.text}
                     </span>
@@ -85,22 +85,22 @@ const MyBookings = () => {
 
                   <div className="ticket-body">
                     <div className="ticket-row">
-                      <span className="label">📅 Ngày chiếu:</span>
-                      <span className="value">28/12/2024</span>
+                      <span className="label">Ngày chiếu:</span>
+                      <span className="value">28/12/2025</span>
                     </div>
 
                     <div className="ticket-row">
-                      <span className="label">🕐 Giờ chiếu:</span>
-                      <span className="value">18h30</span>
+                      <span className="label">Giờ chiếu:</span>
+                      <span className="value">19h15</span>
                     </div>
 
                     <div className="ticket-row">
-                      <span className="label">📍 Địa điểm:</span>
-                      <span className="value">Lotte Cinema Ninh Kiều</span>
+                      <span className="label">Địa điểm:</span>
+                      <span className="value">TTTM Lotte Mart, Cần Thơ</span>
                     </div>
 
                     <div className="ticket-row seats">
-                      <span className="label">💺 Ghế:</span>
+                      <span className="label">Ghế:</span>
                       <div className="seats-badges">
                         {booking.seats?.map((seat, idx) => (
                           <span key={idx} className="seat-badge">
@@ -111,14 +111,14 @@ const MyBookings = () => {
                     </div>
 
                     <div className="ticket-row total">
-                      <span className="label">💰 Tổng tiền:</span>
+                      <span className="label">Tổng tiền:</span>
                       <span className="value">
                         {booking.totalAmount?.toLocaleString('vi-VN')} VNĐ
                       </span>
                     </div>
 
                     <div className="ticket-row">
-                      <span className="label">📝 Ngày đặt:</span>
+                      <span className="label">Ngày đặt:</span>
                       <span className="value">
                         {new Date(booking.createdAt).toLocaleString('vi-VN')}
                       </span>
@@ -126,7 +126,7 @@ const MyBookings = () => {
 
                     {booking.status === 'confirmed' && booking.confirmedAt && (
                       <div className="ticket-row">
-                        <span className="label">✅ Xác nhận lúc:</span>
+                        <span className="label">Xác nhận lúc:</span>
                         <span className="value">
                           {new Date(booking.confirmedAt).toLocaleString('vi-VN')}
                         </span>
@@ -135,7 +135,7 @@ const MyBookings = () => {
 
                     {booking.status === 'pending' && (
                       <div className="pending-notice">
-                        ⏳ Vui lòng chuyển khoản và gửi ảnh chụp cho admin để xác nhận vé
+                        Vui lòng chuyển khoản và gửi ảnh chụp cho admin để xác nhận vé
                       </div>
                     )}
                   </div>

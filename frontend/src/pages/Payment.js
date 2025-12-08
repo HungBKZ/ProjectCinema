@@ -97,13 +97,13 @@ const Payment = () => {
     <div className="payment-container">
       <header className="payment-header">
         <div className="header-content">
-          <h1>💳 Thanh Toán</h1>
+          <h1>Thanh Toán</h1>
           <div className="header-actions">
             <button 
               onClick={handleGoBack}
               className="btn btn-secondary"
             >
-              ← Quay lại
+              Quay lại
             </button>
             <button onClick={logout} className="btn btn-outline">
               Đăng xuất
@@ -142,7 +142,7 @@ const Payment = () => {
               <div className="info-grid">
                 <div className="info-item">
                   <span className="label">Sự kiện:</span>
-                  <span className="value">EYESEE Showcase</span>
+                  <span className="value">EYESEE Showcase: "Refocus - The Next Frame"</span>
                 </div>
                 <div className="info-item">
                   <span className="label">Ngày chiếu:</span>

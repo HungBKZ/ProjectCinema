@@ -1,13 +1,14 @@
 .my-bookings-container {
   min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
   padding-bottom: 40px;
 }
 
 .bookings-header {
-  background: #ffffff;
-  box-shadow: 0 2px 10px rgba(59, 130, 246, 0.1);
+  background: #000000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   padding: 20px 0;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #404040;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -20,17 +21,17 @@
 }
 
 .no-bookings {
-  background: #ffffff;
+  background: #2a2a2a;
   border-radius: 20px;
   padding: 60px 40px;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.1);
-  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid #404040;
 }
 
 .no-bookings p {
   font-size: 18px;
-  color: #6b7280;
+  color: #C8C8C8;
   margin-bottom: 25px;
 }
 
@@ -41,15 +42,15 @@
 }
 
 .ticket-card {
-  background: #ffffff;
+  background: #2a2a2a;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.1);
-  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid #404040;
 }
 
 .ticket-header {
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
   padding: 20px 25px;
   display: flex;
   justify-content: space-between;
@@ -57,8 +58,8 @@
 }
 
 .ticket-header h2 {
-  font-size: 28px;
-  font-weight: 800;
+  font-size: 20px;
+  font-weight: 700;
   color: white;
 }
 
@@ -74,8 +75,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px 15px;
-  background: #f8faff;
+  background: #000000;
   border-radius: 10px;
+  border: 1px solid #404040;
 }
 
 .ticket-row.seats {
@@ -85,26 +87,26 @@
 }
 
 .ticket-row .label {
-  color: #6b7280;
+  color: #C8C8C8;
   font-size: 14px;
   font-weight: 500;
 }
 
 .ticket-row .value {
-  color: #1f2937;
+  color: #ffffff;
   font-weight: 600;
   font-size: 14px;
 }
 
 .ticket-row.total {
-  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-  border: 1px solid #3b82f6;
+  background: #1a1a1a;
+  border: 2px solid #9ca3af;
   margin-top: 5px;
 }
 
 .ticket-row.total .label,
 .ticket-row.total .value {
-  color: #3b82f6;
+  color: #ffffff;
   font-size: 18px;
   font-weight: 700;
 }
@@ -117,7 +119,7 @@
 }
 
 .seat-badge {
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
   color: white;
   padding: 8px 15px;
   border-radius: 8px;
@@ -126,9 +128,9 @@
 }
 
 .pending-notice {
-  background: rgba(251, 191, 36, 0.2);
-  border: 1px solid rgba(251, 191, 36, 0.5);
-  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.3);
+  border: 1px solid rgba(251, 191, 36, 0.6);
+  color: #fcd34d;
   padding: 15px;
   border-radius: 10px;
   text-align: center;

@@ -1,14 +1,14 @@
 const nodemailer = require('nodemailer');
 
-// Tạo transporter để gửi email - Config chuẩn cho Render
+// Tạo transporter với Brevo SMTP
 const createTransporter = () => {
   return nodemailer.createTransport({
-    host: process.env.EMAIL_HOST,
-    port: parseInt(process.env.EMAIL_PORT), // Chuyển string sang số
-    secure: false, // false cho port 587 (STARTTLS)
+    host: 'smtp-relay.brevo.com',
+    port: 587,
+    secure: false,
     auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASSWORD
+      user: '9d1b3f001@smtp-brevo.com',
+      pass: process.env.BREVO_SMTP_KEY
     }
   });
 };
@@ -18,25 +18,25 @@ const sendPasswordResetEmail = async (email, newPassword) => {
   const transporter = createTransporter();
   
   const mailOptions = {
-    from: process.env.EMAIL_USER,
+    from: 'EYESEE Showcase <9d1b3f001@smtp-brevo.com>',
     to: email,
-    subject: '🔐 Mật khẩu mới - Hệ thống đặt vé Cinema',
+    subject: '🔐 Mật khẩu mới - EYESEE Showcase',
     html: `
-      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px;">
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); border-radius: 10px;">
         <div style="background: white; padding: 30px; border-radius: 10px;">
-          <h2 style="color: #3b82f6; text-align: center;">🎬 Cinema Booking System</h2>
+          <h2 style="color: #2a2a2a; text-align: center;">🎬 EYESEE Showcase</h2>
           <p style="font-size: 16px; color: #4b5563;">Xin chào,</p>
           <p style="font-size: 16px; color: #4b5563;">Bạn đã yêu cầu đặt lại mật khẩu. Dưới đây là mật khẩu mới của bạn:</p>
           <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; text-align: center; margin: 20px 0;">
             <p style="font-size: 14px; color: #6b7280; margin: 0;">Mật khẩu mới:</p>
-            <p style="font-size: 24px; font-weight: bold; color: #3b82f6; margin: 10px 0; letter-spacing: 2px;">${newPassword}</p>
+            <p style="font-size: 24px; font-weight: bold; color: #2a2a2a; margin: 10px 0; letter-spacing: 2px;">${newPassword}</p>
           </div>
           <p style="font-size: 14px; color: #ef4444; background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444;">
             ⚠️ <strong>Quan trọng:</strong> Vui lòng đổi mật khẩu ngay sau khi đăng nhập để bảo mật tài khoản.
           </p>
           <p style="font-size: 14px; color: #6b7280; margin-top: 20px;">Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua email này.</p>
           <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 20px 0;">
-          <p style="font-size: 12px; color: #9ca3af; text-align: center;">© 2025 Cinema Booking System. All rights reserved.</p>
+          <p style="font-size: 12px; color: #9ca3af; text-align: center;">© 2025 EYESEE Showcase. All rights reserved.</p>
         </div>
       </div>
     `
@@ -48,13 +48,12 @@ const sendPasswordResetEmail = async (email, newPassword) => {
 // Gửi email xác nhận đặt vé
 const sendBookingConfirmationEmail = async (email, bookingDetails) => {
   const transporter = createTransporter();
-  
-  const { seats, totalAmount, bookingId } = bookingDetails;
+  const { bookingId, seats, totalAmount } = bookingDetails;
   
   const mailOptions = {
-    from: process.env.EMAIL_USER,
+    from: 'EYESEE Showcase <9d1b3f001@smtp-brevo.com>',
     to: email,
-    subject: '✅ Xác nhận đặt vé thành công - Cinema',
+    subject: 'Xác nhận đặt vé thành công - EYESEE Showcase: "Refocus - The Next Frame"',
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px;">
         <div style="background: white; padding: 30px; border-radius: 10px;">
@@ -95,12 +94,12 @@ const sendBookingConfirmationEmail = async (email, bookingDetails) => {
           </div>
 
           <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 20px 0;">
-          <p style="font-size: 12px; color: #9ca3af; text-align: center;">© 2025 Cinema Booking System. All rights reserved.</p>
+          <p style="font-size: 12px; color: #9ca3af; text-align: center;">© 2025 EYESEE Showcase. All rights reserved.</p>
         </div>
       </div>
     `
   };
-
+  
   await transporter.sendMail(mailOptions);
 };
 

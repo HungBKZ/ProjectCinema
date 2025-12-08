@@ -81,7 +81,7 @@ const AdminDashboard = () => {
     <div className="admin-container">
       <header className="admin-header">
         <div className="header-content">
-          <h1>🎫 Quản Lý Đặt Vé</h1>
+          <h1>Quản Lý Đặt Vé</h1>
           <div className="header-actions">
             <button onClick={() => navigate('/')} className="btn btn-secondary">
               Trang chủ
